@@ -1,5 +1,12 @@
 .img {
-  max-height: 15em;
-  min-height: 15em;
+  max-height: 25em;
+  min-height: 25em;
+  max-width: 50vw;
+  min-width: 50vw;
   border-radius: 0.8em;
+}
+
+#container {
+  min-height: 50vh;
+  max-height: 50vh;
 }

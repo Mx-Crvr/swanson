@@ -1,8 +1,8 @@
 "use strict"
+const container = document.getElementById('container')
 
 window.onload = () => {
-  getQuote();
-  
+  getQuote()
 }
 
 function randomImg() {
@@ -29,13 +29,17 @@ async function getQuote() {
   const result = await response.json();
   const text = result[0]
 
-  const container = document.getElementById('container')
   // Add quote to DOM
   const quote = document.getElementById('quote');
-  quote.innerText = text;
+  quote.innerText = `"${text}"`;
   // Add image to DOM
-  const img = document.createElement('img');
+  const img = document.getElementById('img');
   img.src = randomImg();
   img.classList.add('img')
   container.appendChild(img);
 }
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+  getQuote()
+})
