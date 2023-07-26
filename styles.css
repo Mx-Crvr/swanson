@@ -6,7 +6,20 @@
   border-radius: 0.8em;
 }
 
-#container {
-  min-height: 50vh;
-  max-height: 50vh;
+@media (max-width: 390px) {
+  .img {
+    max-height: 10em;
+    min-height: 10em;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    max-height: 10em;
+    min-height: 10em;
+    max-width: 50vw;
+    min-width: 50vw;
+  }
 }
